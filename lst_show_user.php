@@ -23,9 +23,26 @@ include("sessionssetter.php");
             </nav>
             <nav class="content">
                 <header class="content-header">Anstehende Leitstellenfahrten</header>
-                <div class="info-box-sucess">
-                    <div class="sucess">Hier können dann noch Feedback Nachrichten gegeben werden ;-)</div>
-                </div>
+                <?php
+                if($_GET['msg'] == 1)
+                {
+                  echo "<div class='info-box-sucess'>";
+                      echo "<div class='sucess'>Erfolg! Erfolgreich angemeldet. Sobald du freigeschaltet wirst bekommst du eine Email.</div>";
+                  echo "</div>";
+                }
+                if($_GET['msg'] == 2)
+                {
+                  echo "<div class='info-box-error'>";
+                      echo "<div class='error'>Fehler! Du konntest leider nicht für die Leitstellenfahrt angemeldet werden!</div>";
+                  echo "</div>";
+                }
+                if($_GET['msg'] == 3)
+                {
+                  echo "<div class='info-box-info'>";
+                      echo "<div class='info'>Info! Das Formular bitte nicht manipulieren!</div>";
+                  echo "</div>";
+                }
+                ?>
                 <div class="content-main">
                     <div class="content-box">
                     <div class="content-box-space-small">
@@ -66,10 +83,12 @@ include("sessionssetter.php");
                             echo "<td>" . $dsatz['lst_admin'] . "</td>";
                             if($dsatz['lst_login_pb'] == 1)
                             {
-                              if($dsatz['lst_u_login'] == 0)
+                              $res_visible = mysqli_query($con, "SELECT * FROM `lst_login_fahrt` WHERE `l_user` = '" . $_SESSION['username'] . "'");
+                              if(mysqli_num_rows($res_visible) == 0)
                               {
                               echo "<form action='lst_user_login.php' method='POST'>";
                               echo "<input type='hidden' name='lst_fahrt' value='" . $dsatz['lst_date'] . "'/>";
+                              echo "<input type='hidden' name='send' value='1337'/>";
                               echo "<td><button class='lstbutton-login'>Anmelden</button></td>";
                               echo "</from>";
                               }
@@ -78,7 +97,7 @@ include("sessionssetter.php");
                               echo "<input type='hidden' name='lst_fahrt' value='" . $dsatz['lst_date'] . "'/>";
                               echo "<td><button class='lstbutton-login-remove'>Anmeldung löschung</button></td>";
                               echo "</from>";
-                              }
+                            }
                             }
                             else
                             {
@@ -97,6 +116,7 @@ include("sessionssetter.php");
                           echo "<td>N/A</td>";
                           echo "<td>N/A</td>";
                         }
+                        mysqli_close($con);
                         ?>
                     </table>
                     </div>

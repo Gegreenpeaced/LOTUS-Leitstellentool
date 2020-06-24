@@ -1,10 +1,36 @@
 <?php
-$lst_live = 1;
+
+include("mysql_config.php");
+$con = mysqli_connect("$MYSQL_HOST", "$MYSQL_USER", "$MYSQL_PASS"); //Datenbank Connection
+mysqli_select_db($con, "$MYSQL_DB"); //Auswahl der Datenbank
+$sql = "SELECT `lst_mode` FROM `sys_user` WHERE `u_mail` = '" . $_SESSION['mail'] . "'";
+$res = mysqli_query($con, $sql);
+if (mysqli_num_rows($res) > 0)
+{
+  $dsatz = mysqli_fetch_assoc($res);
+  if($dsatz['lst_mode'] == 1)
+  {
+    $lst_live = "1";
+  }
+  else {
+    $lst_live = "0";
+  }
+}
+else {
+  $lst_live = "0";
+}
+mysqli_close($con);
+
+
 echo "<a href='index.php'><img src='img/dash_logo.png' width='230px'></a>";
 echo "</header>";
 echo "<div class='sidebar-groups'>";
 echo "<h3>Navigationsmenü</h3>";
 echo "<div class='navmenu'>";
+
+
+
+
 if($_SESSION['rechte'] > 0)
 {
 if($lst_live == 1)

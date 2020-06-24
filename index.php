@@ -10,7 +10,7 @@
     //$sql = "SELECT * FROM `system` WHERE 1";
     //$data = mysqli_query($con, $sql);
     ?>
-  <title>Startseite | LOTUS - Leitstelle</title>
+  <title>Startseite | BETA LOTUS - Leitstelle</title>
 </head>
 <boby>
   <main class="index">
@@ -20,7 +20,7 @@
       <a class="index-links" href="login.php">Login</a>
     </nav>
     <footer class="index-footer">
-      <div class="index-footer-text">LOTUS - Leitstellentool<br>Copyright &copy by Julius Reiter
+      <div class="index-footer-text">BETA LOTUS - Leitstellentool<br>Copyright &copy by Julius Reiter
       </div>
     </footer>
   </main>

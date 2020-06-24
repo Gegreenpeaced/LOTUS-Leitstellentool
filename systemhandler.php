@@ -73,7 +73,4 @@ if($_POST['type'] == 3)                                                 // Fahrz
     }
   }
 }
-else {
-  header("location:system.php?msg=10");
-}
 ?>

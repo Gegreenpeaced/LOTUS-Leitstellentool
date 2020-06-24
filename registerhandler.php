@@ -101,7 +101,7 @@ if($res['used'] == 0)
                 </html>
                 ';
 
-                $headers = 'From: noreply@drblackerror.de' . "\r\n" . 'Reply-To: noreply@drblackerror.de' . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'Content-type: text/html; charset=iso-8859-1' . "\r\n" . 'MIME-Version: 1.0';
+                $headers = 'From: noreply@ivb-community.de' . "\r\n" . 'Reply-To: support@ivb-community.de' . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'Content-type: text/html; charset=utf-8' . "\r\n" . 'MIME-Version: 1.0';
 
                 mail($mail, $subject, $message, $headers);
                 header("location:login.php?change=1");

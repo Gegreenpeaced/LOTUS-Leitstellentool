@@ -7,7 +7,7 @@ if($_POST['send'] == 1337)
 
     $res = mysqli_query($con, "SELECT * FROM `lst_maps`"); //Auswahl der Tabelle
     $sql = "INSERT INTO `lst_maps`(m_name, m_vehicle, m_typ, m_gauge, m_sconfig) VALUES ('" . $_POST['map_name'] . "','" . $_POST['map_vehicles'] . "','" . $_POST['map_type'] . "','" . $_POST['map_gauge'] . "','" . $_POST['map_s_config'] . "')";
-    mysqli_query($con, $sql);
+    $res = mysqli_query($con, $sql);
     $map = $_POST['map_name'];
     $num = mysqli_affected_rows($con);
     if ($num > 0)

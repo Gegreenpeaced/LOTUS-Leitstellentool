@@ -39,6 +39,7 @@ session_start();
                         <h2 class="content-box-text-h2">DrBlackError - Danke für den Webspace</h2>
                         <h2 class="content-box-text-h2">Akuba - Danke fürs Fehler beheben</h2>
                         <h2 class="content-box-text-h2">Paulter - Danke fürs Fehler beheben</h2>
+                        <h2 class="content-box-text-h2">Pandemist - Danke fürs Fehler beheben</h2>
                       </div>
                     </div>
                     <div class="content-box-nospace-long">

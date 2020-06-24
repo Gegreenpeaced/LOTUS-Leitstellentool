@@ -4,79 +4,120 @@ $mail = $_POST['mail'];
 $password_old = $_POST['password_old'];
 $password_new = $_POST['password_new'];
 $password_new_2 = $_POST['password_new_2'];
-print_r($_SESSION);
-echo "<br>";
-if($_SESSION['username'] == $_POST['username'])
-{
-  if($_SESSION['mail'] == $_POST['mail'])
-  {
-    if($password_new == $password_new_2)
-    {
-      include("mysqli_config.php");
-      $con = mysqli_connect($MYSQL_HOST, $MYSQL_USER, $MYSQL_PASS); //Datenbank Connection
-      mysqli_select_db($con, $MYSQL_DB); //Auswahl der Datenbank
-      $mail = $_SESSION['mail'];
-      $sql = "SELECT * FROM `sys_user` WHERE `u_mail` = '" . $mail . "'";
-      $res = mysqli_query($con, $sql);
-      if(mysqli_num_rows($res) > 0)
-      {
+$username = $_POST['username'];
 
-        echo "hi";
-      }
-      else {
-        echo $sql;
-        echo "<br>";
-      }
-        /*/if(password_verify($password_old, $res['u_pass']))
-        {
-          echo "true";
-        }
-        else {
-          echo "keine Verbindung möglich";
-          echo $sql;
-        }/*/
-    }
-    else {
-      echo "Passwörter stimmen nicht überein!";
-    }
-  }
-  else {
-    echo "false";
-  }
-}
-/*/
-  echo $_POST['username'];
-  echo "Hi";
-  $con = mysqli_connect($MYSQL_HOST, $MYSQL_USER, $MYSQL_PASS); //Datenbank Connection
-  mysqli_select_db($con, $MYSQL_DB); //Auswahl der Datenbank
-  $res2 = mysqli_query($con, "SELECT * FROM sys_user WHERE u_mail = '" . $mail . "' AND u_token = '" . $token . "'"); //Auswahl der Tabelle
-  //$pw_db = $res2['u_pass'];
-  if($password_new == $password_new_2)
-  {
-    if(password_verify($password_old, $res2['u_pass']))
+      if($password_new == $password_new_2)
       {
-        $password_hashed = password_hash("$password_new", PASSWORD_DEFAULT);
-        mysqli_query($con, "UPDATE sys_user SET u_pass = '" . $password_hashed . "' WHERE u_mail = '" . $mail . "' AND u_token = '" . $token . "'");
-        $num = mysqli_affected_rows($con3);
-
-        if ($num > 0) // Das Passwort
+        include("mysql_config.php");
+        $con = mysqli_connect($MYSQL_HOST, $MYSQL_USER, $MYSQL_PASS); //Datenbank Connection
+        mysqli_select_db($con, $MYSQL_DB); //Auswahl der Datenbank
+        $mail = $_SESSION['mail'];
+        $sql = "SELECT * FROM `sys_user` WHERE `u_mail` = '$mail'";
+        $res = mysqli_query($con, $sql);
+        if(mysqli_num_rows($res) > 0)
         {
-            echo "Hi";
+          $dsatz = mysqli_fetch_assoc($res);
+          if(password_verify($password_old, $dsatz['u_pass']))
+          {
+            $new_pw_hash = password_hash("$password_new", PASSWORD_DEFAULT);
+            $sql_update = "UPDATE `sys_user` SET `u_pass` = '$new_pw_hash' WHERE `u_mail` = '$mail'";
+            $res_update = mysqli_query($con, $sql_update);
+            $num = mysqli_affected_rows($con);
+
+            if($num > 0)
+            {
+              $to = $_SESSION['mail'];
+              $name = $dsatz['u_name'];
+              $date = date('D d M Y, h:i');
+              $nachname = $dsatz['u_nachname'];
+              $subject = 'Dein Passwort wurde geändert!';
+              $message = '
+              <html>
+                <head>
+                  <style>
+                  body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: sans-serif;
+                    background: #34495e;
+                  }
+                  a{
+                    text-decoration: none;
+                  }
+                  .login {
+                    width: 300px;
+                    padding: 40px;
+                    position: absolute;
+                    top: 30%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: #191919;
+                  }
+                  .login h1{
+                    color: white;
+                    font-size: 30px;
+                    font-weight: 50;
+                    text-align: center;
+                  }
+                  .login h4 {
+                    color: white;
+                    font-size: 16px;
+                    font-weight: 100;
+                  }
+                  .login input[type = "submit"] {
+                    border: 0;
+                    background: none;
+                    display: block;
+                    margin: 20px auto;
+                    text-align: center;
+                    border: 2px solid #2ecc71;
+                    padding: 8px 35px;
+                    outline: none;
+                    color: white;
+                    transition: 0.25s;
+                    cursor: pointer;
+                  }
+                  .login input[type = "submit"]:hover {
+                    background: #2ecc71;
+                  }
+                  </style>
+                  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                  <title>Dein Passwort wurde geändert | LOTUS-Leitstelle</title>
+                </head>
+                <body>
+                  <div class="login">
+                  <form class="login" action="Link eingeben!" method="post">
+                    <h1>LOTUS Leitstelle</h1>
+                    <h4>Hallo ' . $name . ' ' . $nachname . '.<br><br>
+                    Am ' . $date . ' wurde dein Passwort für die LOTUS - Leitstelle geändert.<br>Das warst nicht du?<br>
+                    Dann Kontaktiere umgehend einen Administrator.
+                    <br>
+                    <br><br>
+                    Dein LOTUS-Leitstellenteam
+                    </h4>
+                    <input type="submit" value="Anmelden"></input>
+                  </div>
+                  </form>
+                </body>
+              </html>
+              ';
+
+              $headers = 'From: noreply@drblackerror.de' . "\r\n" . 'Reply-To: support-lst@drblackerror.de' . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'Content-type: text/html; charset=utf-8' . "\r\n" . 'MIME-Version: 1.0';
+
+              mail($to, $subject, $message, $headers);
+
+              header("location:login.php?msg=1");
+              $_SESSION = array();
+            }
+            else {
+              header("location:logout.php?msg=2");
+            }
+          }
+          else {
+            header("location:changepw.php?msg=1");
+          }
         }
-        else {
-          echo "Nej";
-        }
-      }
       else {
-        header("location:changepw.php?msg=2"); //Das Passwort stimmt nicht mit dem aus der Datenbank überein.
+        header("location:changepw.php?msg=2");
       }
-   }
-  else  {
-    header("location:changepw.php?msg=1"); //Die neuen Passwörter stimmen nicht überein
-  }
-}
-else
-{
-  echo "Nein";
-  //header("location:changepw.php?msg=3"); // Sind nicht die eigenen Daten lol
-}/*/
+    }

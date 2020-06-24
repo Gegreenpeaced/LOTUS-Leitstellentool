@@ -162,7 +162,7 @@ include("sessionssetter_a.php");
 
                         <tr>
                           <?php
-                          echo "<td><input type='text' placeholder='Generiertes Token' value='" . $_GET['token'] . "'></input></td>";
+                          echo "<td>---</td>";
                           ?>
                           <td>---</td>
                           <form action="systemhandler.php" method="POST">

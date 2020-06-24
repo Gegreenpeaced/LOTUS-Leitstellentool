@@ -88,7 +88,4 @@
       header("location:system.php?msg=5");
     }
   }
-  else {
-    header("location:system.php?msg=10");
-  }
 ?>

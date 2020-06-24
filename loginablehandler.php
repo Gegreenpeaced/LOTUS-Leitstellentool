@@ -95,7 +95,7 @@ if($_POST['send'] == 1337)
           </html>
           ';
 
-          $headers = 'From: noreply@drblackerror.de' . "\r\n" . 'Reply-To: support-lst@drblackerror.de' . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'Content-type: text/html; charset=utf-8' . "\r\n" . 'MIME-Version: 1.0';
+          $headers = 'From: noreply@ivb-community.de' . "\r\n" . 'Reply-To: support@ivb-community.de' . "\r\n" . 'X-Mailer: PHP/' . phpversion() . "\r\n" . 'Content-type: text/html; charset=utf-8' . "\r\n" . 'MIME-Version: 1.0';
 
           mail($to, $subject, $message, $headers);
         }

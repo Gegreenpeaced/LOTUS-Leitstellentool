@@ -29,13 +29,13 @@
         echo "<h4>Passwörter stimmen nicht überein!</h4>"; // Beide Passwort eingaben waren nicht gleich!
       }
       ?>
-      <input type="text" name="vorname" placeholder="Vorname"></input>
-      <input type="text" name="nachname" placeholder="Nachname"></input>
-      <input type="text" name="username" placeholder="Username"></input>
-      <input type="email" name="mail" placeholder="E-Mail"></input>
-      <input type="password" name="password" placeholder="Password"></input>
-      <input type="password" name="password_2" placeholder="Password wiederholen"></input>
-      <input type="number" name="token" placeholder="Token"></input>
+      <input type="text" name="vorname" maxlength="20" placeholder="Vorname (max. 20 Zeichen)"></input>
+      <input type="text" name="nachname" maxlength="20" placeholder="Nachname (max. 20 Zeichen)"></input>
+      <input type="text" name="username" maxlength="20" placeholder="Username (max. 20 Zeichen)"></input>
+      <input type="email" name="mail" maxlength="50" placeholder="E-Mail"></input>
+      <input type="password" name="password" maxlength="255" placeholder="Password"></input>
+      <input type="password" name="password_2" maxlength="255" placeholder="Password wiederholen"></input>
+      <input type="number" name="token" maxlength="15" placeholder="Token"></input>
       <input type="submit" name="" value="Registrieren"></input>
       <div class="login-a">
       <a class="login-a-class" href="login.php">Anmelden</a> oder <a class="login-a-class" href="reset.php">Passwort zurücksetzen</a>

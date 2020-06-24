@@ -98,6 +98,8 @@ include("sessionssetter_a.php");
                             <th>Umlauf Code</th>
                             <th>Download-Center</th>
                             <th>Download-Center-Kategorie</th>
+                            <th>Endpunkt 1</th>
+                            <th>Endpunkt 2</th>
                             <th>Wochentage</th>
                             <th>Optionen</th>
                         </tr>

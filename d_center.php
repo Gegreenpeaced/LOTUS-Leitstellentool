@@ -42,7 +42,8 @@ include("sessionssetter.php");
                     $sql_h_title = "SELECT * FROM `sys_dl_cat`";
                     $res_h_title = mysqli_query($con, $sql_h_title);
                     $num_h_title = mysqli_affected_rows($con);
-
+                    if($num_h_title > 0)
+                    {
                     while($data_h_title = mysqli_fetch_assoc($res_h_title))
                       {
                         echo "<h3>" . $data_h_title['name'] . "</h3>";
@@ -79,6 +80,27 @@ include("sessionssetter.php");
                         echo "<br>";
                         echo "<br>";
                       }
+                    }
+                    else {
+                      echo "<h3>Keine Kategorien Verfügbar</h3>";
+                      echo "<div class='table'>";
+                      echo "<table id='sttable'>";
+                        echo "<tr>";
+                          echo "<th>N/A</th>";
+                          echo "<th>N/A</th>";
+                          echo "<th>N/A</th>";
+                          echo "<th>N/A</th>";
+                        echo "</tr>";
+
+                        echo "<tr>";
+                          echo "<td>N/A</td>";
+                          echo "<td>N/A</td>";
+                          echo "<td>N/A</td>";
+                          echo "<td>N/A</td>";
+                        echo "</tr>";
+                      echo "</table>";
+                      echo "</div>";
+                    }
                     ?>
                 </div>
             </nav>

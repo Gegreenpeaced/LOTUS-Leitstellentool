@@ -58,7 +58,7 @@ include("sessionssetter_a.php");
                   if($_GET['msg'] == 6)
                   {
                     echo "<div class='info-box-sucess'>";
-                        echo "<div class='sucess'>Erfolg! Passwort wurde auf 1234 zurückgesetzt!</div>";
+                        echo "<div class='sucess'>Erfolg! Passwort wurde auf 123456 zurückgesetzt!</div>";
                     echo "</div>";
                   }
                   if($_GET['msg'] == 7)
@@ -97,30 +97,33 @@ include("sessionssetter_a.php");
                         {
                         while($dsatz = mysqli_fetch_assoc($res))
                         {
-                          echo "<tr>";
-                          echo "<form action='userchangerhandler.php' method='post'>";
-                          echo "<td>" . $dsatz['u_name'] . "</td>";
-                          echo "<td>" . $dsatz['u_nachname'] . "</td>";
-                          echo "<td>" . $dsatz['u_nickname'] . "</td>";
-                          echo "<td>" . $dsatz['u_mail'] . "</td>";
-                          if($_SESSION['rechte'] == 2)
-                          {
-                          if($dsatz['u_rechte'] == 1)
-                          {
-                            echo "<td><select name='rechte' id='rechte'><option value='1' selected='selected'>User</option><option value='2'>Moderator</option></td>";
-                            echo "<input type='hidden' name='send' value='1337'/>";
-                            echo "<input type='hidden' name='mail' value='" . $dsatz['u_mail'] . "'/>";
-                            echo "<td><input type='submit' class='lstbutton-login' value='Änderungen übernehmen'></input></form>";
-                            echo "<form action='userpwreset.php' method='POST'>";
-                            echo "<input type='hidden' name='send' value='1337'>";
-                            echo "<input type='hidden' name='r_mail' value='" . $dsatz['u_mail'] . "'/>";
-                            echo "<input type='hidden' name='r_nickname' value='" . $dsatz['u_nickname'] . "'>";
-                            echo "<input class='lstbutton-login-remove' type='submit' value='Passwort zurücksetzen'></input></td>";
-                            echo "</form>";
-                            echo "</tr>";
-                          }
-                          if($dsatz['u_rechte'] == 2)
-                          {
+                            echo "<tr>";
+                            echo "<form action='userchangerhandler.php' method='post'>";
+                            echo "<td>" . $dsatz['u_name'] . "</td>";
+                            echo "<td>" . $dsatz['u_nachname'] . "</td>";
+                            echo "<td>" . $dsatz['u_nickname'] . "</td>";
+                            echo "<td>" . $dsatz['u_mail'] . "</td>";
+                            if($dsatz['u_mail'] != $_SESSION['mail'])
+                            {
+                            if($_SESSION['rechte'] == 2)
+                              {
+                                if($dsatz['u_rechte'] == 1)
+                                  {
+                                    echo "<td><select name='rechte' id='rechte'><option value='1' selected='selected'>User</option><option value='2'>Moderator</option></td>";
+                                    echo "<input type='hidden' name='send' value='1337'/>";
+                                    echo "<input type='hidden' name='mail' value='" . $dsatz['u_mail'] . "'/>";
+                                    echo "<td><input type='submit' class='lstbutton-login' value='Änderungen übernehmen'></input></form>";
+                                    echo "<form action='userpwreset.php' method='POST'>";
+                                    echo "<input type='hidden' name='send' value='1337'>";
+                                    echo "<input type='hidden' name='r_mail' value='" . $dsatz['u_mail'] . "'/>";
+                                    echo "<input type='hidden' name='r_nickname' value='" . $dsatz['u_nickname'] . "'>";
+                                    echo "<input class='lstbutton-login-remove' type='submit' value='Passwort zurücksetzen'></input></td>";
+                                    echo "</form>";
+                                    echo "</tr>";
+                                  }
+                                if($dsatz['u_rechte'] == 2)
+                              {
+
                             echo "<td><select name='rechte' id='rechte'><option value='1'>User</option><option selected='selected' value='2'>Moderator</option></td>";
                             echo "<input type='hidden' name='send' value='1337'/>";
                             echo "<input type='hidden' name='mail' value='" . $dsatz['u_mail'] . "'/>";
@@ -133,7 +136,7 @@ include("sessionssetter_a.php");
                             echo "</form>";
                             echo "</tr>";
                           }
-                          if($dsatz['u_rechte'] == 3)
+                        if($dsatz['u_rechte'] == 3)
                           {
                             echo "<td>Admin</td>";
                             echo "<input type='hidden' name='send' value='1337'/>";
@@ -147,7 +150,7 @@ include("sessionssetter_a.php");
                             echo "</form>";
                             echo "</tr>";
                           }
-                          }
+                        }
                           if($_SESSION['rechte'] == 3)
                           {
                             if($dsatz['u_rechte'] == 1)
@@ -180,6 +183,12 @@ include("sessionssetter_a.php");
                           echo "</tr>";
                           }
                         }
+                        else {
+                          echo "<td>N/A</td>";
+                          echo "<td>N/A</td>";
+                          echo "</tr>";
+                        }
+                      }
                       }
                       else {
                         echo "<tr>";

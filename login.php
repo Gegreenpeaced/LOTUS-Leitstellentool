@@ -12,6 +12,14 @@
     <form class="login" action="loginhandler.php" method="post">
       <h1>Login</h1>
       <?php
+      if($_GET['msg'] == 1)
+      {
+        echo "<h4>Passwort wurde erfolgreich geändert!</h4>";
+      }
+      if($_GET['msg'] == 2)
+      {
+        echo "<h4>Passwort wurde nicht geändert!</h4>";
+      }
       if($_GET['error'] == 1)
       {
         echo "<h4>Nutzer nicht gefunden!</h4>";
