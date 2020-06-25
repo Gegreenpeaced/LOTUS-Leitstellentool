@@ -27,7 +27,7 @@ include("sessionssetter.php");
                 if($_GET['msg'] == 1)
                 {
                   echo "<div class='info-box-sucess'>";
-                      echo "<div class='sucess'>Erfolg! Erfolgreich angemeldet. Sobald du freigeschaltet wirst bekommst du eine Email.</div>";
+                      echo "<div class='sucess'> Erfolgreich angemeldet! Sobald du freigeschaltet wirst bekommst du eine Email.</div>";
                   echo "</div>";
                 }
                 if($_GET['msg'] == 2)
@@ -40,6 +40,18 @@ include("sessionssetter.php");
                 {
                   echo "<div class='info-box-info'>";
                       echo "<div class='info'>Info! Das Formular bitte nicht manipulieren!</div>";
+                  echo "</div>";
+                }
+                if($_GET['msg'] == 4)
+                {
+                  echo "<div class='info-box-sucess'>";
+                      echo "<div class='sucess'>Erfolg! Deine Anmeldung wurde gelöscht!</div>";
+                  echo "</div>";
+                }
+                if($_GET['msg'] == 5)
+                {
+                  echo "<div class='info-box-error'>";
+                      echo "<div class='error'>Fehler!  Deine Anmeldung konnte nicht gelöscht werden!</div>";
                   echo "</div>";
                 }
                 ?>
@@ -93,7 +105,8 @@ include("sessionssetter.php");
                               echo "</from>";
                               }
                               else {
-                              echo "<form action='lstuserloginhandler.php' method='POST'>";
+                              echo "<form action='lstuserremovehandler.php' method='POST'>";
+                              echo "<input type='hidden' name='send' value='1337'/>";
                               echo "<input type='hidden' name='lst_fahrt' value='" . $dsatz['lst_date'] . "'/>";
                               echo "<td><button class='lstbutton-login-remove'>Anmeldung löschung</button></td>";
                               echo "</from>";

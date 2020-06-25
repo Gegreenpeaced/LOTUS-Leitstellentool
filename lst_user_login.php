@@ -9,7 +9,7 @@ if($_POST['send'] == 1337)
   $sql = "INSERT INTO `lst_login_fahrt` (`l_user`, `lst_confirm`) VALUES ('$name', '0')";
   $res = mysqli_query($con, $sql);
 
-  if(mysqli_num_rows($res) > 0)
+  if(mysqli_num_rows($res) < 0)
   {
     header("location:lst_show_user.php?msg=1");
     die;

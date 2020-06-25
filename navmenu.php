@@ -71,7 +71,7 @@ echo "<br>";
 }
 echo "<h4>Sonstiges</h4>";
 echo "<br>";
-echo "<a href='https://www.github.com/Gegreenpeaced'><button class='navbutton'>Fehler melden!</button></a>";
+echo "<a href='https://github.com/Gegreenpeaced/LOTUS-Leitstellentool'><button class='navbutton'>Fehler melden!</button></a>";
 echo "<br>";
 echo "<a href='settings.php'><button class='navbutton'>Einstellungen</button></a>";
 echo "<br>";
@@ -114,7 +114,7 @@ else {
   }
   echo "<h4>Sonstiges</h4>";
   echo "<br>";
-  echo "<a href='https://www.github.com/Gegreenpeaced'><button class='navbutton'>Fehler melden!</button></a>";
+  echo "<a href='https://github.com/Gegreenpeaced/LOTUS-Leitstellentool'><button class='navbutton'>Fehler melden!</button></a>";
   echo "<br>";
   echo "<a href='settings.php'><button class='navbutton'>Einstellungen</button></a>";
   echo "<br>";
@@ -130,7 +130,7 @@ else
 {
   echo "<h4>Sonstiges</h4>";
   echo "<br>";
-  echo "<a href='https://www.github.com/Gegreenpeaced'><button class='navbutton'>Fehler melden!</button></a>";
+  echo "<a href='https://github.com/Gegreenpeaced/LOTUS-Leitstellentool'><button class='navbutton'>Fehler melden!</button></a>";
   echo "<br>";
   echo "<a href='impressum.php'><button class='navbutton'>Impressum</button></a>";
   echo "<br>";
