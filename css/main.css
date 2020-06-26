@@ -1,3 +1,16 @@
+#chat-content {
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  height: 280px;
+  width: 365px;
+}
+
+#chat-content h2 {
+  margin: 1px;
+}
+
 html,
 body {
     font-family: sans-serif;
@@ -7,21 +20,6 @@ body {
 }
 .dark-theme {
   background-color: #666666;
-}
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: #333;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #bdc3c7;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #bdc3c7;
 }
 tr {
   text-align: left;
@@ -80,7 +78,6 @@ a:visited {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    overflow-y: auto;
 }
 .navmenu {
     text-align: left;
@@ -97,7 +94,6 @@ a:visited {
     color: white;
     margin: 10px 0;
     cursor: pointer;
-
 }
 .navbutton:visited{
     text-decoration: none;
@@ -270,7 +266,7 @@ a:visited {
 .sucess {
     margin: 8px;
     text-align: left;
-    color: white;
+    color: black;
     font-weight: bold;
     font-style: italic;
 }
