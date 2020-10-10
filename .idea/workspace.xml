@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="752fec4a-66ed-4e8e-8013-c901a5f2041e" name="Default Changelist" comment="" />
+    <list default="true" id="752fec4a-66ed-4e8e-8013-c901a5f2041e" name="Default Changelist" comment="Structure Update for 1.0" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,13 +21,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Julius\Documents\Programmieren\LOTUS-Leitstellentool\handler" />
+      <recent name="C:\Users\Julius\Documents\Programmieren\LOTUS-Leitstellentool\src" />
       <recent name="C:\Users\Julius\Documents\Programmieren\LOTUS-Leitstellentool\system" />
+      <recent name="C:\Users\Julius\Documents\Programmieren\LOTUS-Leitstellentool\normal_sites" />
+      <recent name="C:\Users\Julius\Documents\Programmieren\LOTUS-Leitstellentool\handler" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -38,17 +40,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602342034320</updated>
-      <workItem from="1602342036272" duration="333000" />
+      <workItem from="1602342036272" duration="769000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Structure Update for 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="Structure Update for 1.0" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="184" y="29" key="SettingsEditor" timestamp="1602342372889">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1602342430702">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1602342372889" />
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1602342430702" />
+    <state x="184" y="29" key="SettingsEditor" timestamp="1602342431520">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="184" y="29" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1602342431520" />
   </component>
 </project>

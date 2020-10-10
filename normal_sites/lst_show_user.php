@@ -107,7 +107,7 @@ include("sessionssetter.php");
                               echo "</from>";
                               }
                               else {
-                              echo "<form action='handler/lstuserremovehandler.php' method='POST'>";
+                              echo "<form action='../handler/lstuserremovehandler.php' method='POST'>";
                               echo "<input type='hidden' name='send' value='1337'/>";
                               echo "<input type='hidden' name='lst_fahrt' value='" . $dsatz['lst_date'] . "'/>";
                               echo "<td><button class='lstbutton-login-remove'>Anmeldung löschung</button></td>";

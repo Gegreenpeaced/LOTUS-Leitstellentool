@@ -6,13 +6,13 @@ require("downchecker.php");
   <head>
     <meta charset="utf-8">
     <title>Login | LOTUS-Leitstelle</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../src/css/login.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='shortcut icon' href='img/favicon.png'>
+    <link rel='shortcut icon' href='../src/img/favicon.png'>
   </head>
   <body>
     <div class="login">
-    <form class="login" action="handler/loginhandler.php" method="post">
+    <form class="login" action="../handler/loginhandler.php" method="post">
       <h1>Login</h1>
       <?php
       if($_GET['msg'] == 1)

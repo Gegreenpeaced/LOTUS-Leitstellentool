@@ -107,7 +107,7 @@ include("sessionssetter_a.php");
                         {
                           while($dsatz = mysqli_fetch_assoc($res))
                           {
-                            echo "<form action='handler/fahrzeugchangehandler.php' method='POST'>";
+                            echo "<form action='../handler/fahrzeugchangehandler.php' method='POST'>";
                             echo "<input type='hidden' name='send' value='1337'>";
                             echo "<input type='hidden' name='old_nmr' value='" . $dsatz['f_nmr'] . "'>";
                             echo "<tr class='left'>";
@@ -155,7 +155,7 @@ include("sessionssetter_a.php");
                               echo "<td><select name='vehicle_gauge' id='vehicle_gauge'><option value='1000'>1000 Millimeter</option><option value='1435' selected='selected'>1435 Millimeter</option></select></td>";
                             }
                             echo "<td><input type='submit' class='lstbutton-login' value='Änderung übernehmen'/></input></form> ";
-                            echo "<form action='handler/fahrzeugremoverhandler.php' method='POST'>";
+                            echo "<form action='../handler/fahrzeugremoverhandler.php' method='POST'>";
                             echo "<input type='hidden' name='send' value='1337'>";
                             echo "<input type='hidden' name='vehicle_remove' value='" . $dsatz['f_nmr'] . "'>";
                             echo "<input type='submit' class='lstbutton-login-remove' value='Fahrzeug löschen'/></input></td>";
@@ -177,7 +177,7 @@ include("sessionssetter_a.php");
                         </tr>
                         <?php
                         echo "<tr class='left'>";
-                        echo "<form action='handler/fahrzeughandler.php' method='POST'>";
+                        echo "<form action='../handler/fahrzeughandler.php' method='POST'>";
                           echo "<td><input type='text' name='vehicle_number' require ></td>";
                           echo "<input type='hidden' name='send' value='1337' require >";
                           echo "<td><select name='vehicle_class' id='vehicle_class'><option value='0'>Bus</option><option value='1'>Straßenbahn</option></select></td>";

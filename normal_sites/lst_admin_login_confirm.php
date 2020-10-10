@@ -79,7 +79,7 @@ include("sessionssetter.php");
                         {                                                                                                             // ROUTEN ANPASSEN!
                           while($dsatz = mysqli_fetch_assoc($res))
                           {
-                            echo "<form action='handler/lstloginhandler.php' method='POST'>";
+                            echo "<form action='../handler/lstloginhandler.php' method='POST'>";
                             echo "<input type='hidden' name='name' value='" . $dsatz['l_user'] . "'>";
                             echo "<input type='hidden' name='send' value='1337'>";
                             echo "<tr>";

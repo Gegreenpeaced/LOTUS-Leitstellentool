@@ -80,7 +80,7 @@ include("sessionssetter_a.php");
                         <th>Optionen</th>
                       </tr>
                       <tr>
-                        <form action="handler/dlcenterhandler.php" method="POST">
+                        <form action="../handler/dlcenterhandler.php" method="POST">
                           <?php
                           include("mysql_config.php");
                           $con = mysqli_connect("$MYSQL_HOST", "$MYSQL_USER", "$MYSQL_PASS"); //Datenbank Connection
@@ -146,7 +146,7 @@ include("sessionssetter_a.php");
                             echo "<td>" . $data_table_content['date_t'] . "</td>";
                             echo "<td>" . $data_table_content['des'] . "</td>";
                             echo "<td>";
-                            echo "<form action='handler/dcenterremovehandler.php' method='POST'>";
+                            echo "<form action='../handler/dcenterremovehandler.php' method='POST'>";
                             echo "<input type='hidden' name='send' value='1337'>";
                             echo "<input type='hidden' name='remove_name' value='" . $data_table_content['prim'] . "'>";
                             echo "<input class='lstbutton-login-remove' type='submit' value='Löschen'>";

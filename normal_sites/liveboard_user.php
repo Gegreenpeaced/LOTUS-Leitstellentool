@@ -104,7 +104,7 @@ if(isset($_GET['action']) && $_GET['action'] == "sendNotification") {
       ?>
       <title>Liveboard | LOTUS-Leitstelle</title>
 
-      <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet" href="../src/css/main.css">
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
@@ -191,6 +191,6 @@ if(isset($_GET['action']) && $_GET['action'] == "sendNotification") {
             <br>
         </main>
 
-        <script src="js/liveboard_user.js"></script>
+        <script src="../src/js/liveboard_user.js"></script>
     </body>
 </html>

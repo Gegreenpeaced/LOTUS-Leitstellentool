@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="../img/favicon.png"/>
+	<link rel="icon" type="image/png" href="../src/img/favicon.png"/>
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -31,7 +31,7 @@
 		<!--  -->
 		<div class="w-full flex-w flex-sb-m p-l-80 p-r-80 p-t-22 p-lr-15-sm">
 			<div class="wrappic1 m-r-30 m-t-10 m-b-10">
-				<a href="#"><img src="../img/dash_logo.png" alt="LOGO"></a>
+				<a href="#"><img src="../src/img/dash_logo.png" alt="LOGO"></a>
 			</div>
 		</div>
 

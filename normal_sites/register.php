@@ -4,14 +4,14 @@ require("downchecker.php"); ?>
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../src/css/login.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel='shortcut icon' href='img/favicon.png'>
+    <link rel='shortcut icon' href='../src/img/favicon.png'>
     <title>Registrieren | LOTUS-Leitstelle</title>
   </head>
   <body>
     <div class="login">
-    <form class="login" action="handler/registerhandler.php" method="post">
+    <form class="login" action="../handler/registerhandler.php" method="post">
       <h1>Registrieren</h1>
       <?php
       if($_GET['change'] == 2)

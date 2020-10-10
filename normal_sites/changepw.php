@@ -7,14 +7,14 @@ session_start();
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../src/css/login.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='shortcut icon' href='src/pic/favicon.png'>
     <title>Passwort ändern | LOTUS - Leitstelle</title>
   </head>
   <body>
     <div class="login">
-    <form class="login" action="handler/changepwhandler.php" method="post">
+    <form class="login" action="../handler/changepwhandler.php" method="post">
       <h1>Passwort ändern</h1>
       <?php
       if($_GET['msg'] == 1)
