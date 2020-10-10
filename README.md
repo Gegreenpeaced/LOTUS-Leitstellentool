@@ -29,3 +29,6 @@ Sollte ein wichtiges Update für die Software erscheinen so sollten folgende Sch
 ###4. Administration innerhalb des Tools
 
 **Weitere Informationen folgen!**
+
+
+Eine Abänderung des Projektes ist erlaubt aber nur wenn das Impressum sowie der Github Link im Nav Menü nicht entfernt werden. Außerdem darf kein erneuter öffentlicher Upload stattfinden und das Projekt darf nicht als eigenes Werk erklärt werden. Auch wenn Änderungen vorgenommen werden dürfen diese NICHT namentlich vermerkt werden!
