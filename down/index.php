@@ -117,7 +117,7 @@
 	$res_version = mysqli_query($con, $sql_version);
 	$data = mysqli_fetch_assoc($res_version);
 	echo $data['version'];
-	?> | <a href='../impressum.php'>Impressum</a>
+	?> | <a href='../system/impressum.php'>Impressum</a>
 	</div>
 </footer>
 </html>

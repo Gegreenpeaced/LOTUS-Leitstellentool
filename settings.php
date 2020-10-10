@@ -46,7 +46,7 @@ include("sessionssetter.php");
                   }
                     ?>
                     <div class="content-box">
-                        <form class="content-box-nospace-long" action="settingshandler.php" method="post">
+                        <form class="content-box-nospace-long" action="handler/settingshandler.php" method="post">
                           <div class="content-box-text">
                             <h1 class="content-box-text-h1">Grafische Einstellungen</h1>
                             <?php

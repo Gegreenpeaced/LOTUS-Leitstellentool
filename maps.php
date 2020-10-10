@@ -105,7 +105,7 @@ include("sessionssetter_a.php");
                           while($dsatz = mysqli_fetch_assoc($res))
                           {
                         echo "<tr>";
-                        echo "<form action='mapchangehandler.php' method='post'>";
+                        echo "<form action='handler/mapchangehandler.php' method='post'>";
                             echo "<td><input type='text' name='map_name_new' value='" . $dsatz['m_name'] . "'/></td>";
                             if($dsatz['m_vehicle'] == 1)
                             {
@@ -156,7 +156,7 @@ include("sessionssetter_a.php");
                         echo "<input type='hidden' name='send' value='1337'/>";
                         echo "<input type='hidden' name='m_old_name' value='" . $dsatz['m_name'] . "'/>";
                         echo "<td><input type='submit' class='lstbutton-login' value='Änderungen übernehmen'></form>
-                        </input><form action='mapremovehandler.php' method='post'>
+                        </input><form action='handler/mapremovehandler.php' method='post'>
                         <input type='hidden' name='send' value='1337'/>
                         <input type='hidden' name='map_name_del' value='" . $dsatz['m_name'] . "'
                         ><input type='submit' class='lstbutton-login-remove' value='Karte löschen'</input>
@@ -173,7 +173,7 @@ include("sessionssetter_a.php");
                           <td  class="grey"></td>
                           <td  class="grey"></td>
                         </tr>
-                        <form action='maphandler.php' method="post">
+                        <form action='handler/maphandler.php' method="post">
                         <tr>
                           <td><input type="text" name="map_name" required='required'/></td>
                           <input type="hidden" name="send" value="1337"></input>

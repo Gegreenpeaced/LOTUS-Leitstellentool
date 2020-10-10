@@ -12,7 +12,7 @@ require("downchecker.php");
   </head>
   <body>
     <div class="login">
-    <form class="login" action="loginhandler.php" method="post">
+    <form class="login" action="handler/loginhandler.php" method="post">
       <h1>Login</h1>
       <?php
       if($_GET['msg'] == 1)

@@ -99,7 +99,7 @@ include("sessionssetter_a.php");
                         while($dsatz = mysqli_fetch_assoc($res))
                         {
                             echo "<tr>";
-                            echo "<form action='userchangerhandler.php' method='post'>";
+                            echo "<form action='handler/userchangerhandler.php' method='post'>";
                             echo "<td>" . $dsatz['u_name'] . "</td>";
                             echo "<td>" . $dsatz['u_nachname'] . "</td>";
                             echo "<td>" . $dsatz['u_nickname'] . "</td>";
@@ -169,7 +169,7 @@ include("sessionssetter_a.php");
                           echo "<input type='hidden' name='send' value='1337'/>";
                           echo "<input type='hidden' name='mail' value='" . $dsatz['u_mail'] . "'/>";
                           echo "<td><input type='submit' class='lstbutton-login' value='Änderungen übernehmen'></input></form>";
-                          echo "<form action='userremovehandler.php' method='POST'>";
+                          echo "<form action='handler/userremovehandler.php' method='POST'>";
                           echo "<input type='hidden' name='send' value='1337'/>";
                           echo "<input type='hidden' name='r_mail' value='" . $dsatz['u_mail'] . "'/>";
                           echo "<input type='hidden' name='r_nickname' value='" . $dsatz['u_nickname'] . "'>";

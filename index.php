@@ -19,7 +19,7 @@ require("downchecker.php");
   <main class="index">
     <header class="index-header"><img class="index-header-items" src="img/dash_logo.png"/></header>
     <nav class="index-main-content">
-      <a class="index-links" href="impressum.php">Impressum</a>
+      <a class="index-links" href="system/impressum.php">Impressum</a>
       <a class="index-links" href="login.php">Login</a>
     </nav>
     <footer class="index-footer">

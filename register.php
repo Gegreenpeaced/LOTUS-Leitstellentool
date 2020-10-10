@@ -11,7 +11,7 @@ require("downchecker.php"); ?>
   </head>
   <body>
     <div class="login">
-    <form class="login" action="registerhandler.php" method="post">
+    <form class="login" action="handler/registerhandler.php" method="post">
       <h1>Registrieren</h1>
       <?php
       if($_GET['change'] == 2)

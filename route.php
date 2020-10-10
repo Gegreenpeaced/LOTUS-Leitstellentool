@@ -116,7 +116,7 @@ include("sessionssetter_a.php");
                             {
                                                                       // $dl_center_card = mysqli_query($con, "SELECT `link` FROM `dl_center` WHERE `prim` = '" . $dsatz['r_prim'] . "'");         NOT WORKING CONTACT @  AKKUBAHN
                                 echo "<tr>";
-                                echo "<form action='routechangehandler.php' method='post'>";
+                                echo "<form action='handler/routechangehandler.php' method='post'>";
                                 echo "<input type='hidden' name='route_prim' value='" . $dsatz['r_prim'] . "'>";
                                 echo "<input type='hidden' name='send' value='1337'>";
                                 echo "<td><input type='text' name='route_number' value='" . $dsatz['r_nmr'] . "'></input></td>";
@@ -139,7 +139,7 @@ include("sessionssetter_a.php");
                                 {
                                 echo "<td><select name='day' id='day'><option value='1' >Mo-Fr</option><option value='2' >Sa</option><option value='3' selected='selected'>So</option></select></td>";
                                 }
-                                echo "<td><input type='submit' class='lstbutton-login' value='Umlauf ändern'></form><form action='routeremovehandler.php' method='post'>
+                                echo "<td><input type='submit' class='lstbutton-login' value='Umlauf ändern'></form><form action='handler/routeremovehandler.php' method='post'>
                                 <input type='hidden' name='route_prim' value='" . $dsatz['r_prim'] . "'>
                                 <input type='hidden' name='send' value='1337'>
                                 <button type='submit' class='lstbutton-login-remove'>Umlauf löschen</button></td>";
@@ -160,7 +160,7 @@ include("sessionssetter_a.php");
                           <td class="grey"></td>
                         </tr>
                         <tr>
-                          <form action='routehandler.php' method="post" enctype="multipart/form-data">
+                          <form action='handler/routehandler.php' method="post" enctype="multipart/form-data">
                           <td><input type="text" name="route_number" placeholder="Umlaufnummer" required></input></td>
                           <?php
                           include("mysql_config.php");

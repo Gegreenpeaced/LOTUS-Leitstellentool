@@ -183,7 +183,7 @@ include("sessionssetter_a.php");
                           {
                             echo "<td>Nicht Verwendet</td>";
                           }
-                              echo "<td><form action='systemremovehandler.php' method='POST'>";                                           //Formular beginn
+                              echo "<td><form action='handler/systemremovehandler.php' method='POST'>";                                           //Formular beginn
                               echo "<input type='hidden' name='token' value='" . $dsatz['l_token'] . "' required>";
                               echo "<input type='hidden' name='type' value='1'>";
                               echo "<input type='hidden' name='send' value='1337'>";
@@ -203,7 +203,7 @@ include("sessionssetter_a.php");
                           echo "<td>---</td>";
                           ?>
                           <td>---</td>
-                          <form action="systemhandler.php" method="POST">
+                          <form action="handler/systemhandler.php" method="POST">
                           <input type="hidden" name="send" value="1337"></input>
                           <input type="hidden" name="type" value="1"></input>
                           <td><input type="submit" class="lstbutton-login" value="Token generieren"></input></td>
@@ -226,7 +226,7 @@ include("sessionssetter_a.php");
                         {
                           echo "<tr>";
                           echo "<td>" . $dsatz['name'] . "</td>";
-                              echo "<td><form action='systemremovehandler.php' method='POST'>";                                           //Formular beginn
+                              echo "<td><form action='handler/systemremovehandler.php' method='POST'>";                                           //Formular beginn
                               echo "<input type='hidden' name='vehicle' value='" . $dsatz['name'] . "' required>";
                               echo "<input type='hidden' name='type' value='2'>";
                               echo "<input type='hidden' name='send' value='1337'>";
@@ -241,7 +241,7 @@ include("sessionssetter_a.php");
                           </tr>
 
                         <tr>
-                          <form action="systemhandler.php" method="POST">
+                          <form action="handler/systemhandler.php" method="POST">
                           <?php
                           echo "<td><input type='text' name='text_type' placeholder='Fahrzeugtyp' required></input></td>";
                           ?>
@@ -272,7 +272,7 @@ include("sessionssetter_a.php");
                           echo "<td>" . $dsatz['name_drop_menu'] . "</td>";
                           echo "<td>" . $dsatz['name_table'] . "</td>";
                           echo "<td>" . $dsatz['des_table'] . "</td>";
-                              echo "<td><form action='systemremovehandler.php' method='POST'>";                                           //Formular beginn
+                              echo "<td><form action='handler/systemremovehandler.php' method='POST'>";                                           //Formular beginn
                               echo "<input type='hidden' name='cat' value='" . $dsatz['name'] . "' required>";
                               echo "<input type='hidden' name='type' value='3'>";
                               echo "<input type='hidden' name='send' value='1337'>";
@@ -290,7 +290,7 @@ include("sessionssetter_a.php");
                           </tr>
 
                         <tr>
-                          <form action="systemhandler.php" method="POST">
+                          <form action="handler/systemhandler.php" method="POST">
                           <?php
                           echo "<td><input type='text' name='cat_text' placeholder='Name der Kategorie' require></input></td>";
                           echo "<td><input type='text' name='cat_drop' placeholder='Name im Dropdownmenü' require></input></td>";
@@ -321,7 +321,7 @@ include("sessionssetter_a.php");
                           echo "<tr>";
                           echo "<td>" . $dsatz['dest'] . "</td>";
                           echo "<td>" . $dsatz['map'] . "</td>";
-                              echo "<td><form action='systemremovehandler.php' method='POST'>";                                           //Formular beginn
+                              echo "<td><form action='handler/systemremovehandler.php' method='POST'>";                                           //Formular beginn
                               echo "<input type='hidden' name='id' value='" . $dsatz['prim'] . "'>";
                               echo "<input type='hidden' name='type' value='4'>";
                               echo "<input type='hidden' name='send' value='1337'>";
@@ -337,7 +337,7 @@ include("sessionssetter_a.php");
                           </tr>
 
                         <tr>
-                          <form action="systemhandler.php" method="POST">
+                          <form action="handler/systemhandler.php" method="POST">
                           <?php
                           echo "<td><input type='text' name='dest_name' placeholder='Name des Zieles' require></input></td>";
                           echo "<td><select name='dest_map'>";

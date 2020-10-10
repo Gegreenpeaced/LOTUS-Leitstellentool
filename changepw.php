@@ -14,7 +14,7 @@ session_start();
   </head>
   <body>
     <div class="login">
-    <form class="login" action="changepwhandler.php" method="post">
+    <form class="login" action="handler/changepwhandler.php" method="post">
       <h1>Passwort ändern</h1>
       <?php
       if($_GET['msg'] == 1)

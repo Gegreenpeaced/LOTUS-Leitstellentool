@@ -189,7 +189,7 @@ require("sessionssetter_a.php");
                               {
                               if($dsatz['lst_login_pb'] == 0)
                               {
-                                    echo "<form action='loginablehandler.php' method='POST'>";
+                                    echo "<form action='handler/loginablehandler.php' method='POST'>";
                                     echo "<input type='hidden' name='date' value='" . $dsatz['lst_date'] . "'>";
                                     echo "<input type='hidden' name='lst_name' value='" . $dsatz['lst_name'] . "'>";
                                     echo "<input type='hidden' name='send' value='1337'>";
@@ -198,7 +198,7 @@ require("sessionssetter_a.php");
                               }
                               else
                               {
-                                  echo "<form action='logindisablehandler.php' method='POST'>";
+                                  echo "<form action='handler/logindisablehandler.php' method='POST'>";
                                   echo "<input type='hidden' name='date' value='" . $dsatz['lst_date'] . "'>";
                                   echo "<input type='hidden' name='send' value='1337'>";
                                   echo "<button class='lstbutton-login'>Anmeldung deaktivieren!</button>";
@@ -215,7 +215,7 @@ require("sessionssetter_a.php");
                                   echo "</form>";
                               }
 
-                                  echo "<form action='lstremovehandler.php' method='POST'>";
+                                  echo "<form action='handler/lstremovehandler.php' method='POST'>";
                                   echo "<input type='hidden' name='name' value='" . $dsatz['lst_name'] . "'>";
                                   echo "<input type='hidden' name='date' value='" . $dsatz['lst_date'] . "'>";
                                   echo "<input type='hidden' name='send' value='1337'>";
@@ -256,7 +256,7 @@ require("sessionssetter_a.php");
                         </tr>
                         <?php
                         echo "<tr>";
-                        echo "<form action='lsthandler.php' method='POST'>";
+                        echo "<form action='handler/lsthandler.php' method='POST'>";
                         echo "<td><input type='text' name='lst_create_name' placeholder='Name' required/></td>";
                         echo "<td><input type='text' name='lst_create_date' placeholder='Datum' id='datepicker' required/></td>";
 

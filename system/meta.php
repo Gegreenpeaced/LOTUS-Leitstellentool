@@ -10,5 +10,5 @@ print_r($_SESSION);
 $sql = "SELECT `themeurl` FROM `sys_user` WHERE `u_nickname`='Gegreenpeaced'";
 echo $sql;
 ?>
-<link rel="stylesheet" href="css/styles/normal.css">
-<link rel='shortcut icon' href='img/favicon.png'>
+<link rel="stylesheet" href="../css/styles/normal.css">
+<link rel='shortcut icon' href='../img/favicon.png'>
